@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html lang="en">
+ <head> 
+<meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Resume Builder</title> 
+<link rel="stylesheet" href="styles.css">  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    
+ </head> 
+<body>
+ <div class="container"> 
+<h1>Create Your Resume</h1>
+ <div class="form-container"> 
+<input type="text" id="name" placeholder="Full Name">
+ <input type="text" id="fathername" placeholder="Father's Name"> 
+<input type="text" id="mothername" placeholder="Mother's Name">
+ <input type="date" id="dob" placeholder="D.O.B">
+ <input type="text" id="sex" placeholder="Sex">
+ <input type="text" id="maritalstatus" placeholder="Marital Status"> 
+<input type="text" id="nationality" placeholder="Nationality"> 
+<input type="email" id="email" placeholder="Email">
+ <input type="text" id="phone" placeholder="Phone">
+ <textarea id="address" placeholder="Address"></textarea>
+ <textarea id="objective" placeholder="Objective"></textarea>
+ <textarea id="education" placeholder="Education"></textarea>
+ <input type="text" id="languageknown" placeholder="Language Known">
+ <input type="text" id="skills" placeholder="Skills (comma separated)">
+ <textarea id="experience" placeholder="Experience"></textarea>
+ <textarea id="hobbiesinterests" placeholder="Hobbies & Interests"></textarea>
+
+ <button onclick="generateResume()">Generate Resume</button>
+ </div>
+
+<div class="resume-card">
+ <div id="resume-preview">  <h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<u>RESUME</u></h1><br>
+<b>Name&nbsp:&nbsp</b><h3 id="resume-name"></h3><br>   <b>Fathername&nbsp:&nbsp</b><h3 id="resume-fathername"></h3><br>
+<b>Mothername&nbsp:&nbsp</b><h3 id="resume-mothername"></h3><br>
+<b>D.O.B&nbsp:&nbsp</b><h3 id="resume-dob"></h3><br>
+<b>Sex&nbsp:&nbsp</b><h3 id="resume-sex"></h3><br>
+<b>Marital Status&nbsp:&nbsp</b><h3 id="resume-maritalstatus"></h1><br>
+<b>Nationality&nbsp:&nbsp</b><h3 id="resume-nationality"></h3><br>
+<b>E-mail&nbsp:&nbsp</b><h3 id="resume-email"></h3><br>
+<b>Phone&nbsp:&nbsp</b><h3 id="resume-phone"></h3><br>
+<b>Address&nbsp:&nbsp</b><h3 id="resume-address"></h3><br>
+<b>Objective&nbsp:&nbsp</b><h3 id="resume-objective"></h3><br>
+<b>Education&nbsp:&nbsp</b><h3 id="resume-education"></h3><br>
+<b>Language Known&nbsp:&nbsp</b><h3 id="resume-languageknown"></h3><br>
+<b>Skills&nbsp:&nbsp</b><h3 id="resume-skills"></h3><br>
+<b>Experience&nbsp:&nbsp</b><h3 id="resume-experience"></h3><br>
+<b>Hobbies & Interests&nbsp:&nbsp</b><h3 id="resume-hobbiesinterests"></h3><br> 
+ </div>
+ </div>
+
+ <button id="download">Download PDF</button>
+ <button onclick="logout()">Logout</button>
+ </div>
+ <script src="script.js"></script>
+ </body>
+</html>
